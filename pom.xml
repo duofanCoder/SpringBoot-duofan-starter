@@ -8,12 +8,12 @@
 		<version>2.3.3.RELEASE</version>
 		<relativePath/>
 	</parent>
-	<groupId>com.starterkit.springboot</groupId>
-	<artifactId>springboot-starterkit-mysql</artifactId>
+	<groupId>com.wzh.pms</groupId>
+	<artifactId>place-manage-system</artifactId>
 	<version>1.0</version>
-	<name>springboot-starterkit-mysql</name>
+	<name>place-manage-system</name>
 	<packaging>jar</packaging>
-	<description>Demo project for Spring Boot with MySQL DB</description>
+	<description>全国行政区域资源管理系统</description>
 
 	<properties>
 		<java.version>1.8</java.version>
