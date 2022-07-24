@@ -8,12 +8,12 @@
 		<version>2.3.3.RELEASE</version>
 		<relativePath/>
 	</parent>
-	<groupId>com.wzh.pms</groupId>
-	<artifactId>place-manage-system</artifactId>
+	<groupId>com.duofan.starter</groupId>
+	<artifactId>spring-boot-starter-df</artifactId>
 	<version>1.0</version>
-	<name>place-manage-system</name>
+	<name>spring-boot-starter-df</name>
 	<packaging>jar</packaging>
-	<description>全国行政区域资源管理系统</description>
+	<description>springboot快速启动配置</description>
 
 	<properties>
 		<java.version>1.8</java.version>
