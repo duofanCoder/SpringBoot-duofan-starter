@@ -1,4 +1,4 @@
-package com.duofan.starter.config;
+package com.duofan.starter.framework.config;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.NamingConventions;
