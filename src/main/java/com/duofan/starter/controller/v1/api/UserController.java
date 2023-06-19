@@ -1,12 +1,12 @@
 package com.duofan.starter.controller.v1.api;
 
-import com.duofan.starter.controller.v1.request.UserSignupRequest;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.duofan.starter.controller.v1.command.PasswordFormCommand;
 import com.duofan.starter.controller.v1.command.ProfileFormCommand;
+import com.duofan.starter.controller.v1.request.UserSignupRequest;
 import com.duofan.starter.dto.model.common.UserDto;
 import com.duofan.starter.dto.response.Response;
 import com.duofan.starter.service.UserService;
-import com.duofan.starter.controller.v1.command.PasswordFormCommand;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.Authorization;
@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -64,7 +65,7 @@ public class UserController {
      * @return
      */
     @PostMapping("/signup")
-    public Response signup(@RequestBody @Valid UserSignupRequest userSignupRequest) {
+    public Response signup(@RequestBody @Validated UserSignupRequest userSignupRequest) {
         return Response.ok().setData(registerUser(userSignupRequest, false));
     }
 

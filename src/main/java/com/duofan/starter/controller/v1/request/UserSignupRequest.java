@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 
 /**
@@ -17,9 +18,12 @@ import javax.validation.constraints.NotEmpty;
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserSignupRequest {
-    @NotEmpty(message = "{constraints.NotEmpty.message}")
+    @NotBlank(message = "用户名不能为空")
+    @NotEmpty(message = "用户名不能为空")
     private String username;
+    
 
-    @NotEmpty(message = "{constraints.NotEmpty.message}")
+    @NotBlank(message = "密码不能为空")
+    @NotEmpty(message = "密码不能为空")
     private String password;
 }

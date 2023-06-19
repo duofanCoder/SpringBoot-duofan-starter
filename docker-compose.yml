@@ -10,9 +10,9 @@ services:
       - 3306:3306
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=brs
-      - MYSQL_USER=brs-user
-      - MYSQL_PASSWORD=changeit
+      - MYSQL_DATABASE=df-navigation
+      - MYSQL_USER=df-navigation
+      - MYSQL_PASSWORD=dSz3PGjPZycjGK88
   web:
     build: .
     links:

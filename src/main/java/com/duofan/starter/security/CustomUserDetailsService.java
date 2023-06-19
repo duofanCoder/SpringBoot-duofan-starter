@@ -1,8 +1,8 @@
 package com.duofan.starter.security;
 
-import com.duofan.starter.service.UserService;
-import com.duofan.starter.model.enums.UserRole;
 import com.duofan.starter.dto.model.common.UserDto;
+import com.duofan.starter.model.enums.UserRole;
+import com.duofan.starter.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -12,7 +12,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Arpit Khandelwal.
@@ -35,7 +38,6 @@ public class CustomUserDetailsService implements UserDetailsService {
             List<GrantedAuthority> authorities = getUserAuthority(userDto.getRole());
             return buildUserForAuthentication(userDto, authorities);
         } catch (RuntimeException e) {
-            log.info(e.getMessage());
             throw new UsernameNotFoundException("用户名 " + username + " 不存在。");
         }
     }
